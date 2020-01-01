@@ -15,9 +15,9 @@ weatherForm.addEventListener("submit", evt => {
     .then(res => {
       const { error, placeName, summary, temperature, precipProbability } = res;
       if (error) {
-          dataParagraph.textContent = error;
+        dataParagraph.textContent = error;
       } else {
-          dataParagraph.textContent = `${placeName} ${summary} ${temperature} ${precipProbability}`;
+        dataParagraph.textContent = `${placeName}. ${summary} It is ${temperature} degrees. Probability of rain is ${precipProbability}%`;
       }
     });
 });
