@@ -8,7 +8,7 @@ dataParagraph.textContent = "";
 weatherForm.addEventListener("submit", evt => {
   evt.preventDefault();
   const { value = "" } = searchInput;
-  fetch(`http://localhost:3000/weather?address=${value}`)
+  fetch(`/weather?address=${value}`)
     .then(res => {
       return res.json();
     })

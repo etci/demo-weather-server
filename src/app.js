@@ -13,6 +13,7 @@ const partialsPath = path.join(__dirname, "../templates/partials");
 console.log("Public Dir: ", publicDir);
 
 const app = express(); // Runs app
+const port = process.env.PORT || 3000;
 
 // Set up handlebars templating engine for express
 app.set("view engine", "hbs");
@@ -96,6 +97,6 @@ app.get("*", (req, res) => {
 });
 
 // Make web server listen on port 3000
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is up and running on port 3000.");
 });
